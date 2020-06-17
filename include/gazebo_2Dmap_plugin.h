@@ -23,7 +23,7 @@
 #define GAZEBO_2DMAP_PLUGIN_H
 
 #include <iostream>
-#include <math.h>
+#include <ignition/math.hh>
 
 #include <common.h>
 #include <gazebo/common/common.hh>
@@ -59,7 +59,7 @@ class OccupancyMapFromWorld : public WorldPlugin {
   /// \param[in] _sdf SDF element that describes the plugin.
   void Load(physics::WorldPtr _parent, sdf::ElementPtr _sdf);
 
-  bool worldCellIntersection(const math::Vector3& cell_center, const double cell_length,
+  bool worldCellIntersection(const ignition::math::Vector3d& cell_center, const double cell_length,
                              gazebo::physics::RayShapePtr ray);
 
 //  void FloodFill(const math::Vector3& seed_point,
